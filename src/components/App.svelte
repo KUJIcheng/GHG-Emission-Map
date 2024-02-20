@@ -77,13 +77,13 @@
           tooltip.style("opacity", 0.8)
                 .html(d.properties.name + "<br/>Greenhouse Gas Emissions: " + (countryEmissions[d.properties.name] + " MtCO2e" || "N/A"))
                 .style("left", (event.pageX + 20) + "px") // 信息距离鼠标的距离
-                .style("top", (event.pageY - 40) + "px")
+                .style("top", (event.pageY - 51) + "px")
                 .style("border-radius", "10px"); // 设置圆角
         })
         //-----鼠标移动行为-----//
         .on('mousemove', function(event) {
           tooltip.style("left", (event.pageX + 20) + "px") // 信息距离鼠标的距离
-                .style("top", (event.pageY - 40) + "px");
+                .style("top", (event.pageY - 51) + "px");
         })
         //-----鼠标离开行为-----//
         .on('mouseout', function(event, d) {
@@ -224,7 +224,7 @@
         })
         .on('mouseout', function() {
           // 鼠标移出时隐藏信息
-          d3.select("#pie-info").html("Touch the pie chart to learn more");
+          d3.select("#pie-info").html("Hover the pie chart to learn more");
           d3.select(this).attr('fill', d => {
               // 根据能源类型重新分配原始颜色
               switch(d.data.name) {
@@ -426,14 +426,22 @@
 <!-- 数据描述文本 图层为3-->
 {#if showGlobeInfo}
 <div id="globe-info-layer" style="position: fixed; right: 20px; top: 70px; background: rgba(255, 255, 255, 0.8); border-radius: 10px; padding: 10px; width: 300px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); z-index: 3;">
-  数据哪儿来的？ 我不到啊！
+  Explore Emissions and Energy Consumption Connections: Dive into the relation and association between national greenhouse gas outputs and energy consumption profiles.🤔
+  <br><br>
+  The dataset sourced from <a href="https://github.com/owid" target="_blank" rel="noopener noreferrer">Our World in Data</a> 🌍 presents comprehensive global energy data including consumption, production, and the variety of energy sources, as well as greenhouse gas (GHG) emissions. 
+  <br><br>
+  This map focuses on the GHG emissions data and national energy compositions of 2018, allowing users to interpret GHG emissions and their energy breakdown.🗺️
 </div>
 {/if}
 
 <!-- 提示文本框 图层为3-->
 {#if showInfo}
 <div id="info-layer" style="position: fixed; left: 20px; bottom: 70px; background: rgba(255, 255, 255, 0.8); border-radius: 10px; padding: 10px; width: 300px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); z-index: 3;" >
-  啊这，我也不知道提示要写什么呢！
+  Interaction Tips:✨
+  <br><br>
+  Use the mouse wheel to zoom in to select a country and obtain the country's greenhouse gas emissions by hovering.🕹️
+  <br><br>
+  Click on the selected country to get more data about the country, including the country's energy consumption and proportion, as well as the ranking of greenhouse gas emissions compared to other countries.🖱️
 </div>
 {/if}
 
@@ -447,7 +455,7 @@
 
 <!-- 悬停饼状图信息框 图层为3 默认隐藏-->
 <div id="pie-info" style="text-align: center; position: fixed; left: 75%; top: 45%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.6); padding: 10px; border-radius: 50%; width: 150px; height: 150px; display: none; align-items: center; justify-content: center; z-index: 3;">
-  Touch the pie chart to learn more
+  Hover the pie chart to learn more
 </div>
 
 <!-- 颜色图例的图层 图层为3 默认隐藏-->
