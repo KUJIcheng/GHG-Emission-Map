@@ -393,7 +393,11 @@
   function hideLegend() {
     document.getElementById('color-legend').style.display = 'none';
   }
-  
+
+  // 跳转链接
+  function goToLink() {
+    window.open('https://github.com/KUJIcheng/GHG-Emission-Map/blob/main/write-up.md', '_blank');
+  }
 </script>
 
 <!-- 提示icon 图层为3-->
@@ -403,6 +407,16 @@
 <img src="icon/icons8-earth-globe-64.png" id="globe-icon" alt="Globe Icon" 
      style="cursor: pointer; position: fixed; right: 20px; top: 20px; width: 48px; height: 48px; z-index: 3;" 
      on:click={toggleGlobeInfo}>
+
+<!-- writeup icon 图层为3 -->
+<img src="icon/icons8-training-64.png" alt="Training Icon" 
+  style="cursor: pointer; position: fixed; left: 20px; top: 20px; width: 48px; height: 48px; z-index: 3;" 
+  on:click={goToLink}>
+
+<!-- 在图标下方添加一行文字 -->
+<span style="position: fixed; left: -2px; top: 68px; z-index: 3; color: black; background-color: rgba(255,255,255,0.0); padding: 2px 8px; border-radius: 4px; font-size: 12px;">
+  Project Writeup
+</span>
 
 <!-- 数据描述文本 图层为3-->
 {#if showGlobeInfo}
