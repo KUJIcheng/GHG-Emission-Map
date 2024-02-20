@@ -413,9 +413,14 @@
   style="cursor: pointer; position: fixed; left: 20px; top: 20px; width: 48px; height: 48px; z-index: 3;" 
   on:click={goToLink}>
 
-<!-- 在图标下方添加一行文字 -->
+<!-- 在writeup icon下方添加一行文字 -->
 <span style="position: fixed; left: -2px; top: 68px; z-index: 3; color: black; background-color: rgba(255,255,255,0.0); padding: 2px 8px; border-radius: 4px; font-size: 12px;">
   Project Writeup
+</span>
+
+<!-- 在地球icon下方添加一行文字 -->
+<span style="position: fixed; right: -4px; top: 68px; z-index: 3; color: black; background-color: rgba(255,255,255,0.0); padding: 2px 8px; border-radius: 4px; font-size: 12px;">
+  Data Description
 </span>
 
 <!-- 数据描述文本 图层为3-->
