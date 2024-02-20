@@ -2,9 +2,9 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: 'main'
   workflow_dispatch:
-
+  
 jobs:
   build_site:
     runs-on: ubuntu-latest
@@ -16,27 +16,34 @@ jobs:
         with:
           node-version: 18
           cache: npm
+
       - name: Install dependencies
         run: npm install
-      - name: Build
+
+      - name: build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
           npm run build
+
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v2
         with:
-          path: 'build/'  # 确保这个路径与你的构建输出目录相匹配
+          # this should match the `pages` option in your adapter-static options
+          path: 'build/'
 
   deploy:
     needs: build_site
     runs-on: ubuntu-latest
+
     permissions:
       pages: write
       id-token: write
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Deploy
         id: deployment
