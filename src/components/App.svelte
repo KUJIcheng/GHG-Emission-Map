@@ -482,7 +482,7 @@
   <br><br>
   This map focuses on the GHG emissions data and national energy compositions of 2018, allowing users to interpret GHG emissions and their energy breakdown.🗺️
   <br><br>
-  "TWh" stands for Terawatt-hour, a unit measuring large-scale energy use or production, equivalent to one trillion watts for an hour. "MtCO2e" represents Metric tons of carbon dioxide equivalent, quantifying greenhouse gas emissions by converting various gases into the equivalent CO2 impact, facilitating comparison of their global warming potential.🌡️
+  "TWh" (Terawatt-hour) measures energy use, equivalent to one trillion watts for an hour. "MtCO2e" (Metric tons of CO2 equivalent) quantifies greenhouse gas emissions, converting various gases into their CO2 impact for comparison, facilitating comparison of their global warming potential.🌡️
 </div>
 {/if}
 
