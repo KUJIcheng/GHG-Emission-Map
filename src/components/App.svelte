@@ -481,6 +481,8 @@
   The dataset sourced from <a href="https://github.com/owid" target="_blank" rel="noopener noreferrer">Our World in Data</a> 🌍 presents comprehensive global energy data including consumption, production, and the variety of energy sources, as well as greenhouse gas (GHG) emissions. 
   <br><br>
   This map focuses on the GHG emissions data and national energy compositions of 2018, allowing users to interpret GHG emissions and their energy breakdown.🗺️
+  <br><br>
+  "TWh" stands for Terawatt-hour, a unit measuring large-scale energy use or production, equivalent to one trillion watts for an hour. "MtCO2e" represents Metric tons of carbon dioxide equivalent, quantifying greenhouse gas emissions by converting various gases into the equivalent CO2 impact, facilitating comparison of their global warming potential.🌡️
 </div>
 {/if}
 
@@ -491,7 +493,7 @@
   <br><br>
   Use the mouse wheel to zoom in to select a country and obtain the country's greenhouse gas emissions by hovering.🕹️
   <br><br>
-  Click on the selected country to get more data about the country, including the country's energy consumption and proportion, as well as the ranking of greenhouse gas emissions compared to other countries.🖱️
+  Click on the selected country to get more information about the country, including the country's energy consumption and proportion, as well as the ranking of greenhouse gas emissions compared to other countries.🖱️
 </div>
 {/if}
 
